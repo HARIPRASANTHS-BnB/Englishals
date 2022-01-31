@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Hacking Tools</h1><hr>
+    <h4>Sherlock Social Meadia Hacking tool</h4>
+    <pre>$ python3 sherlock --help
+        usage: sherlock [-h] [--version] [--verbose] [--folderoutput FOLDEROUTPUT]
+                        [--output OUTPUT] [--tor] [--unique-tor] [--csv]
+                        [--site SITE_NAME] [--proxy PROXY_URL] [--json JSON_FILE]
+                        [--timeout TIMEOUT] [--print-all] [--print-found] [--no-color]
+                        [--browse] [--local]
+                        USERNAMES [USERNAMES ...]
+        
+        Sherlock: Find Usernames Across Social Networks (Version 0.14.0)
+        
+        positional arguments:
+          USERNAMES             One or more usernames to check with social networks.
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          --version             Display version information and dependencies.
+          --verbose, -v, -d, --debug
+                                Display extra debugging information and metrics.
+          --folderoutput FOLDEROUTPUT, -fo FOLDEROUTPUT
+                                If using multiple usernames, the output of the results
+                                will be saved to this folder.
+          --output OUTPUT, -o OUTPUT
+                                If using single username, the output of the result
+                                will be saved to this file.
+          --tor, -t             Make requests over Tor; increases runtime; requires
+                                Tor to be installed and in system path.
+          --unique-tor, -u      Make requests over Tor with new Tor circuit after each
+                                request; increases runtime; requires Tor to be
+                                installed and in system path.
+          --csv                 Create Comma-Separated Values (CSV) File.
+          --site SITE_NAME      Limit analysis to just the listed sites. Add multiple
+                                options to specify more than one site.
+          --proxy PROXY_URL, -p PROXY_URL
+                                Make requests over a proxy. e.g.
+                                socks5://127.0.0.1:1080
+          --json JSON_FILE, -j JSON_FILE
+                                Load data from a JSON file or an online, valid, JSON
+                                file.
+          --timeout TIMEOUT     Time (in seconds) to wait for response to requests.
+                                Default timeout is infinity. A longer timeout will be
+                                more likely to get results from slow sites. On the
+                                other hand, this may cause a long delay to gather all
+                                results.
+          --print-all           Output sites where the username was not found.
+          --print-found         Output sites where the username was found.
+          --no-color            Don't color terminal output
+          --browse, -b          Browse to all results on default browser.
+          --local, -l           Force the use of the local data.json file.</pre>
+          <br>
+          <img src="sherlock.jfif" alt="image">
+          <hr>
+        <h4>ip-logger Tool</h4>
+        <pre><?php
+            if (count($_GET)>0 || count($_POST)>0 || count($_COOKIE)>0){
+                $newEntry = "
+                <div class=\"card border-secondary mb-3\">
+                <div class=\"card-header\">" . $_SERVER['REMOTE_ADDR'] . "</div>
+                <div class=\"card-body\">";
+                if (count($_GET)>0) {
+                
+                    $newEntry.="<h4 class=\"card-title\">GET</h4><p class=\"card-text\">";
+                    foreach ($_GET as $key => $value) {
+                        $newEntry.="<div class=\"container\"><div class=\"row\"><div class=\"col\"><kbd>". htmlspecialchars($key) ."</kbd></div><div class=\"col\"><textarea class=\"form-control\">". htmlspecialchars($value) ."</textarea></div></div></div><br>";
+                    }
+                }
+                if (count($_POST)>0) {
+                
+                    $newEntry.="<h4 class=\"card-title\">POST</h4><p class=\"card-text\">";
+                    foreach ($_POST as $key => $value) {
+                        $newEntry.="<div class=\"container\"><div class=\"row\"><div class=\"col\"><kbd>". htmlspecialchars($key) ."</kbd></div><div class=\"col\"><textarea class=\"form-control\">". htmlspecialchars($value) ."</textarea></div></div></div><br>";
+                    }
+                }
+                if (count($_COOKIE)>0) {
+                
+                    $newEntry.="<h4 class=\"card-title\">COOKIE</h4><p class=\"card-text\">";
+                    foreach ($_COOKIE as $key => $value) {
+                        $newEntry.="<div class=\"container\"><div class=\"row\"><div class=\"col\"><kbd>". htmlspecialchars($key) ."</kbd></div><div class=\"col\"><textarea class=\"form-control\">". htmlspecialchars($value) ."</textarea></div></div></div><br>";
+                    }
+                }</pre>
+                <br>
+                <img src="download.jfif" alt="Image">
+                <hr>
+                <h4>Grabify Non-coding Tool</h4>
+                <br>
+                <a href="https://grabify.link/">Grabify Site</a>
+                <br><br><br><hr>
+
+</body>
+</html>
